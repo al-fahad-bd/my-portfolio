@@ -7,7 +7,7 @@ export const PROJECTS: Project[] = [
     title: 'Plantera',
     description: 'A smart plant care and identification app designed to help users diagnose plant diseases and maintain healthy green spaces.',
     techStack: ['Flutter', 'GetX', 'Node.js', 'Firebase'],
-    imageUrl: 'https://github.com/al-fahad-bd/my-portfolio/blob/main/photo/Screenshot_20260103-184636.png?raw=true',
+    imageUrl: 'https://github.com/al-fahad-bd/my-portfolio/blob/main/assets/photos/planteria.png?raw=true',
     longDescription: 'Plantera is a design-focused plant management application built with Flutter and GetX, offering plant identification, disease diagnosis, and care guidance. The app leverages a scalable Node.js backend and Firebase services for real-time data handling, authentication, and cloud storage, delivering a smooth and reliable experience for plant lovers and gardeners.'
   },
   {

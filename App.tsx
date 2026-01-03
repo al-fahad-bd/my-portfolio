@@ -22,7 +22,7 @@ const ExperienceModule: React.FC<{ exp: Experience; index: number }> = ({ exp, i
       <div className="debossed-panel p-6 md:p-8 relative overflow-hidden transition-all duration-300 group-hover:bg-white/10">
         {/* Hex Bolt Detail */}
         <div className="absolute top-3 right-3 w-2 h-2 rounded-full bg-black/20 border border-white/20 shadow-inner"></div>
-        
+
         <div className="mb-4">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
             <span className="font-mono text-[8px] text-blue-600 font-bold tracking-[0.4em] uppercase">NODE_EXP_0x0{index + 1}</span>
@@ -62,7 +62,7 @@ const EducationModule: React.FC<{ edu: Education; index: number }> = ({ edu, ind
 
       <div className="debossed-panel p-6 md:p-8 relative overflow-hidden transition-all duration-300 group-hover:bg-white/10 border-blue-600/5">
         <div className="absolute top-3 right-3 w-2 h-2 rounded-full bg-black/20 border border-white/20 shadow-inner"></div>
-        
+
         <div className="mb-4">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
             <span className="font-mono text-[8px] text-blue-600 font-bold tracking-[0.4em] uppercase">ACAD_NODE_0x0{index + 1}</span>
@@ -91,7 +91,7 @@ const EducationModule: React.FC<{ edu: Education; index: number }> = ({ edu, ind
 
 const AchievementModule: React.FC<{ ach: Achievement; index: number; onClick: () => void }> = ({ ach, index, onClick }) => {
   return (
-    <div 
+    <div
       onClick={onClick}
       className="relative group interactive cursor-none h-full"
     >
@@ -120,13 +120,13 @@ const AchievementModule: React.FC<{ ach: Achievement; index: number; onClick: ()
 
         {/* Tactical Instruction Overlay on Hover */}
         <div className="mt-4 flex items-center justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-           <span className="font-mono text-[7px] text-blue-600/60 uppercase tracking-widest animate-pulse">INIT_VISUAL_DECRYPT &gt;&gt;</span>
+          <span className="font-mono text-[7px] text-blue-600/60 uppercase tracking-widest animate-pulse">INIT_VISUAL_DECRYPT &gt;&gt;</span>
         </div>
 
         {/* Decorative Engraving */}
         <div className="absolute -bottom-4 -right-4 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity duration-700 pointer-events-none transform rotate-12">
           <svg className="w-24 h-24" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
           </svg>
         </div>
       </div>
@@ -139,10 +139,10 @@ const ProfileModule: React.FC = () => {
     <div className="relative group interactive cursor-none">
       {/* Precision Milled Frame */}
       <div className="relative w-full aspect-[3/4] max-w-[220px] md:max-w-[250px] mx-auto bg-[#b8bcC2] p-[2px] shadow-[20px_20px_50px_rgba(0,0,0,0.3),-5px_-5px_15px_rgba(255,255,255,0.9)] border border-black/10">
-        
+
         {/* Recessed Internal Bevel */}
         <div className="absolute inset-1.5 border border-black/5 pointer-events-none z-20"></div>
-        
+
         {/* Machine Head Bolts */}
         <div className="absolute top-1.5 left-1.5 w-1 h-1 rounded-full bg-black/40 border border-white/20 z-30"></div>
         <div className="absolute top-1.5 right-1.5 w-1 h-1 rounded-full bg-black/40 border border-white/20 z-30"></div>
@@ -151,27 +151,27 @@ const ProfileModule: React.FC = () => {
 
         {/* The Portrait Container */}
         <div className="relative w-full h-full overflow-hidden bg-[#0d0f11] flex items-center justify-center">
-          <img 
-            src="https://github.com/al-fahad-bd/my-portfolio/blob/main/photo/fahad-abdullah.png?raw=true" 
-            alt="Abdullah Al Fahad" 
+          <img
+            src="https://github.com/al-fahad-bd/my-portfolio/blob/main/assets/photos/abdullah_al_fahad.png?raw=true"
+            alt="Abdullah Al Fahad"
             className="w-full h-full object-cover grayscale contrast-110 brightness-[0.85] group-hover:brightness-105 group-hover:contrast-[1.25] group-hover:scale-[1.02] transition-all duration-700 ease-in-out"
           />
-          
+
           <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay bg-[url('https://www.transparenttextures.com/patterns/blueprint.png')] z-10"></div>
           <div className="absolute inset-0 opacity-[0.04] group-hover:opacity-[0.12] transition-opacity duration-700 z-10 pointer-events-none bg-[radial-gradient(#1e4ed8_1px,transparent_1px)] [background-size:40px_40px]"></div>
 
           <div className="absolute inset-0 pointer-events-none overflow-hidden z-40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mix-blend-screen">
-             <div className="absolute left-0 w-full animate-scan-sweep h-px">
-                <div className="absolute bottom-full left-0 w-full h-[150px] bg-gradient-to-t from-blue-600/50 via-blue-500/10 to-transparent"></div>
-                <div className="absolute top-0 left-0 w-full h-[1.5px] bg-white shadow-[0_0_15px_#3b82f6,0_0_30px_#2563eb]">
-                   <div className="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-3 bg-blue-400 blur-lg rounded-full opacity-60"></div>
-                   <div className="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-3 bg-blue-400 blur-lg rounded-full opacity-60"></div>
-                </div>
-             </div>
+            <div className="absolute left-0 w-full animate-scan-sweep h-px">
+              <div className="absolute bottom-full left-0 w-full h-[150px] bg-gradient-to-t from-blue-600/50 via-blue-500/10 to-transparent"></div>
+              <div className="absolute top-0 left-0 w-full h-[1.5px] bg-white shadow-[0_0_15px_#3b82f6,0_0_30px_#2563eb]">
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-3 bg-blue-400 blur-lg rounded-full opacity-60"></div>
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-3 bg-blue-400 blur-lg rounded-full opacity-60"></div>
+              </div>
+            </div>
           </div>
 
           <div className="absolute top-3 left-3 z-30 flex gap-2">
-             <div className="w-1.5 h-1.5 bg-blue-600 rounded-full animate-pulse shadow-[0_0_8px_#2563eb]"></div>
+            <div className="w-1.5 h-1.5 bg-blue-600 rounded-full animate-pulse shadow-[0_0_8px_#2563eb]"></div>
           </div>
 
           <div className="absolute bottom-4 left-4 font-mono text-[7px] text-white/40 group-hover:text-blue-300/80 uppercase tracking-[0.4em] pointer-events-none drop-shadow-md z-30 transition-colors duration-500">
@@ -192,7 +192,7 @@ const ProfileModule: React.FC = () => {
 
 const MobileDeviceFrame: React.FC<{ project: Project; onClick: () => void }> = ({ project, onClick }) => {
   return (
-    <div 
+    <div
       onClick={onClick}
       className="group relative interactive cursor-none shrink-0 w-[160px] md:w-[280px]"
     >
@@ -202,10 +202,10 @@ const MobileDeviceFrame: React.FC<{ project: Project; onClick: () => void }> = (
         <div className="absolute top-20 md:top-28 -right-[2px] md:-right-[3px] w-[2px] md:w-[3px] h-12 md:h-16 bg-[#8e949e] rounded-r-md border-y border-r border-black/20"></div>
 
         <div className="relative w-full h-full bg-[#1a1c1e] rounded-[1.2rem] md:rounded-[2rem] overflow-hidden border border-black/40 shadow-inner">
-          <img 
-            src={project.imageUrl} 
-            alt={project.title} 
-            className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 grayscale group-hover:grayscale-0" 
+          <img
+            src={project.imageUrl}
+            alt={project.title}
+            className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 grayscale group-hover:grayscale-0"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 md:p-6">
             <span className="font-mono text-[7px] md:text-[9px] text-blue-400 mb-1 md:mb-2 tracking-widest uppercase">MODULE_OS_BOOT</span>
@@ -239,7 +239,7 @@ const SkillModule: React.FC<{ skill: Skill; index: number }> = ({ skill, index }
   const activeSegments = Math.round((animatedLevel / 100) * totalSegments);
 
   return (
-    <div 
+    <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className={`skill-card relative p-4 mb-2 debossed-panel border-none group interactive transition-colors duration-300 ${isHovered ? 'bg-white/10' : ''}`}
@@ -260,10 +260,10 @@ const SkillModule: React.FC<{ skill: Skill; index: number }> = ({ skill, index }
       <div className={`relative h-4 flex items-center p-1 border transition-colors duration-300 ${isHovered ? 'bg-blue-600/5 border-blue-600/10' : 'bg-black/5 border-black/5'}`}>
         <div className="segment-bar flex-1 h-2 flex gap-[1px]">
           {[...Array(totalSegments)].map((_, i) => (
-            <div 
-              key={i} 
+            <div
+              key={i}
               className={`segment ${i < activeSegments ? 'active' : ''}`}
-              style={{ 
+              style={{
                 transitionDelay: `${i * 10}ms`,
                 backgroundColor: i < activeSegments ? (isHovered ? '#2563eb' : '#1a1c1e') : 'rgba(0,0,0,0.05)',
                 boxShadow: (isHovered && i < activeSegments) ? '0 0 8px rgba(37,99,235,0.4)' : 'none'
@@ -319,7 +319,7 @@ const App: React.FC = () => {
       };
       const timeStr = now.toLocaleTimeString('en-US', options);
       setDevTime(timeStr);
-      
+
       // Availability check (Example: 9 AM to 10 PM GMT+6)
       const dhakaHour = parseInt(now.toLocaleTimeString('en-GB', { timeZone: 'Asia/Dhaka', hour: '2-digit' }));
       setIsAvailable(dhakaHour >= 9 && dhakaHour < 22);
@@ -350,10 +350,10 @@ const App: React.FC = () => {
   };
 
   const icons = {
-    github: <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>,
-    linkedin: <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>,
-    twitter: <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>,
-    email: <svg viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099l3.83-3.104 5.612 8.118h-18.73l5.464-8.113zm9.201-1.259l4.623-3.746v9.458l-4.623-5.712z"/></svg>
+    github: <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6086 8.199-11.386 0-6.627-5.373-12-12-12z" /></svg>,
+    linkedin: <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>,
+    twitter: <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>,
+    email: <svg viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099l3.83-3.104 5.612 8.118h-18.73l5.464-8.113zm9.201-1.259l4.623-3.746v9.458l-4.623-5.712z" /></svg>
   };
 
   const socialLinks = [
@@ -369,7 +369,7 @@ const App: React.FC = () => {
     <div className="min-h-screen flex flex-col items-center select-none overflow-x-hidden">
       <TopographyBackground />
       <CustomCursor />
-      
+
       <main className="w-full max-w-[1440px] px-4 md:px-8 lg:px-16 py-8 md:py-12 flex flex-col relative">
         <header className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 md:mb-16 border-b border-black/10 pb-6 gap-4">
           <div className="flex items-center space-x-4">
@@ -389,8 +389,8 @@ const App: React.FC = () => {
             </div>
           </div>
           <div className="font-mono text-[9px] text-black/40 tracking-[0.4em] uppercase text-left md:text-right w-full md:w-auto flex flex-col items-start md:items-end">
-             <span>REF: 2021-2024_DEV_CYCLE</span>
-             <span className="text-[7px] mt-1 opacity-60">STATUS: {isAvailable ? 'ACTIVE_AND_AVAILABLE' : 'IDLE_OFFLINE_MODE'}</span>
+            <span>REF: 2021-2024_DEV_CYCLE</span>
+            <span className="text-[7px] mt-1 opacity-60">STATUS: {isAvailable ? 'ACTIVE_AND_AVAILABLE' : 'IDLE_OFFLINE_MODE'}</span>
           </div>
         </header>
 
@@ -409,13 +409,13 @@ const App: React.FC = () => {
                 Flutter Developer with 2+ years of experience in engineering high-fidelity mobile systems.
               </p>
               <div className="flex flex-wrap gap-4">
-                <button 
+                <button
                   onClick={handleDownloadResume}
                   className="steel-btn px-6 md:px-8 py-3 md:py-4 font-mono text-[9px] md:text-[10px] font-black uppercase tracking-widest text-black/80 interactive w-full sm:w-auto"
                 >
                   DOWNLOAD_SPECS_PDF
                 </button>
-                <button 
+                <button
                   onClick={() => setIsContactModalOpen(true)}
                   className="steel-btn px-6 md:px-8 py-3 md:py-4 font-mono text-[9px] md:text-[10px] font-black uppercase tracking-widest text-blue-600 interactive w-full sm:w-auto border-blue-600/30"
                 >
@@ -454,18 +454,18 @@ const App: React.FC = () => {
               [ AUTO_SCROLL_ACTIVE // 0.05 m/s ]
             </div>
           </div>
-          
+
           <div className="relative w-screen -mx-4 md:-mx-8 lg:-mx-16 px-4 md:px-8 lg:px-16">
             <div className="absolute top-0 left-0 w-full h-[1px] bg-black/10 z-10 shadow-[0_1px_0_rgba(255,255,255,0.5)]"></div>
             <div className="absolute bottom-0 left-0 w-full h-[1px] bg-black/10 z-10 shadow-[0_-1px_0_rgba(255,255,255,0.5)]"></div>
-            
+
             <div className="overflow-hidden">
               <div className="flex animate-mechanical-scroll gap-10 md:gap-16 py-12 md:py-20 px-8 w-fit">
                 {projectTrack.map((proj, idx) => (
-                  <MobileDeviceFrame 
-                    key={`${proj.id}-${idx}`} 
-                    project={proj} 
-                    onClick={() => setSelectedProject(proj)} 
+                  <MobileDeviceFrame
+                    key={`${proj.id}-${idx}`}
+                    project={proj}
+                    onClick={() => setSelectedProject(proj)}
                   />
                 ))}
               </div>
@@ -484,21 +484,21 @@ const App: React.FC = () => {
             </div>
           </div>
           <div className="grid lg:grid-cols-[2fr_1fr] gap-12 md:gap-16">
-             <div>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4">
-                  {SKILLS.map((skill, i) => (
-                    <SkillModule key={skill.name} skill={skill} index={i} />
-                  ))}
-                </div>
-             </div>
-             <div className="bg-white/10 p-8 md:p-10 border border-black/10 flex flex-col justify-center relative shadow-sm h-fit self-center">
-                <p className="text-sm font-mono text-slate-700 leading-relaxed uppercase font-bold italic">
-                  "Mobile interfaces are the physical bridge between humans and machine logic. My goal is to mill that bridge with surgical precision."
-                </p>
-                <div className="mt-8 font-mono text-[8px] text-black/30 uppercase tracking-widest">
-                  SYS_VERSION: 2.1.0-STABLE
-                </div>
-             </div>
+            <div>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4">
+                {SKILLS.map((skill, i) => (
+                  <SkillModule key={skill.name} skill={skill} index={i} />
+                ))}
+              </div>
+            </div>
+            <div className="bg-white/10 p-8 md:p-10 border border-black/10 flex flex-col justify-center relative shadow-sm h-fit self-center">
+              <p className="text-sm font-mono text-slate-700 leading-relaxed uppercase font-bold italic">
+                "Mobile interfaces are the physical bridge between humans and machine logic. My goal is to mill that bridge with surgical precision."
+              </p>
+              <div className="mt-8 font-mono text-[8px] text-black/30 uppercase tracking-widest">
+                SYS_VERSION: 2.1.0-STABLE
+              </div>
+            </div>
           </div>
         </section>
 
@@ -543,7 +543,7 @@ const App: React.FC = () => {
               [ SECURE_REGISTRY_LOCK // 0xAF92 ]
             </div>
           </div>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {ACHIEVEMENTS.map((ach, i) => (
               <AchievementModule key={ach.title} ach={ach} index={i} onClick={() => setSelectedAchievement(ach)} />
@@ -574,11 +574,11 @@ const App: React.FC = () => {
 
             <div className="relative overflow-hidden bg-[#0d0f11] min-h-[400px] flex flex-col items-center justify-center p-8 md:p-20 border-[3px] border-black/40 shadow-[inset_10px_10px_30px_rgba(0,0,0,0.8)]">
               <div className="absolute inset-0 opacity-[0.08] pointer-events-none scale-150">
-                 <svg className="w-full h-full" viewBox="0 0 1000 1000" fill="none" stroke="#3b82f6" strokeWidth="0.5">
-                   {[...Array(20)].map((_, i) => (
-                     <circle key={i} cx="500" cy="500" r={100 + i * 50} strokeDasharray="10,10" />
-                   ))}
-                 </svg>
+                <svg className="w-full h-full" viewBox="0 0 1000 1000" fill="none" stroke="#3b82f6" strokeWidth="0.5">
+                  {[...Array(20)].map((_, i) => (
+                    <circle key={i} cx="500" cy="500" r={100 + i * 50} strokeDasharray="10,10" />
+                  ))}
+                </svg>
               </div>
 
               <div className="absolute top-0 left-0 w-full h-2 bg-[repeating-linear-gradient(45deg,#3b82f6,#3b82f6_10px,#0d0f11_10px,#0d0f11_20px)] opacity-40"></div>
@@ -595,17 +595,17 @@ const App: React.FC = () => {
 
               <div className="relative z-10 text-center max-w-2xl px-4">
                 <div className="mb-6 flex justify-center items-center space-x-3">
-                   <div className="w-2 h-2 bg-blue-600 rounded-full animate-pulse shadow-[0_0_15px_rgba(37,99,235,1)]"></div>
-                   <span className="font-mono text-[10px] text-blue-400 uppercase tracking-[0.6em] font-black">DIRECT_LINK_STANDBY</span>
+                  <div className="w-2 h-2 bg-blue-600 rounded-full animate-pulse shadow-[0_0_15px_rgba(37,99,235,1)]"></div>
+                  <span className="font-mono text-[10px] text-blue-400 uppercase tracking-[0.6em] font-black">DIRECT_LINK_STANDBY</span>
                 </div>
-                
+
                 <h2 className="text-4xl md:text-7xl font-black text-white uppercase tracking-tighter mb-12 leading-none italic drop-shadow-[0_0_20px_rgba(255,255,255,0.1)]">
                   READY_FOR<br />
                   <span className="text-blue-500 opacity-80 group-hover:opacity-100 transition-opacity">OVERRIDE?</span>
                 </h2>
 
                 <div className="inline-block p-1 bg-black/40 shadow-inner rounded-sm border border-white/5 max-w-full">
-                  <button 
+                  <button
                     onClick={() => setIsContactModalOpen(true)}
                     className="relative interactive px-6 py-4 md:px-12 md:py-8 bg-gradient-to-br from-white via-[#e0e2e5] to-[#b8bcC2] text-black font-mono text-[10px] md:text-sm font-black uppercase tracking-[0.2em] md:tracking-[0.4em] shadow-[0_10px_25px_rgba(0,0,0,0.5)] active:translate-y-1 active:shadow-none transition-all duration-300 border-x-4 border-blue-600 group/btn"
                   >
@@ -615,9 +615,9 @@ const App: React.FC = () => {
                 </div>
 
                 <div className="mt-14 font-mono text-[7px] text-white/30 uppercase tracking-[1.5em] flex justify-center items-center">
-                   <span className="w-8 md:w-12 h-px bg-white/10 mx-2 md:mx-4"></span>
-                   AES_256_PROTOCOL_ACTIVE
-                   <span className="w-8 md:w-12 h-px bg-white/10 mx-2 md:mx-4"></span>
+                  <span className="w-8 md:w-12 h-px bg-white/10 mx-2 md:mx-4"></span>
+                  AES_256_PROTOCOL_ACTIVE
+                  <span className="w-8 md:w-12 h-px bg-white/10 mx-2 md:mx-4"></span>
                 </div>
               </div>
             </div>
@@ -625,12 +625,12 @@ const App: React.FC = () => {
         </section>
 
         <footer className="py-16 md:py-24 flex flex-col md:flex-row justify-between items-center opacity-40 gap-4">
-           <div className="font-mono text-[8px] tracking-[0.5em] uppercase text-center md:text-left">
-             (c) 2024 Abdullah Al Fahad // Built with Flutter_Mindset
-           </div>
-           <div className="font-mono text-[8px] font-black uppercase tracking-widest text-center">
-             PRECISION_SYSTEMS_OVERRIDE_ENABLED
-           </div>
+          <div className="font-mono text-[8px] tracking-[0.5em] uppercase text-center md:text-left">
+            (c) 2024 Abdullah Al Fahad // Built with Flutter_Mindset
+          </div>
+          <div className="font-mono text-[8px] font-black uppercase tracking-widest text-center">
+            PRECISION_SYSTEMS_OVERRIDE_ENABLED
+          </div>
         </footer>
       </main>
 
