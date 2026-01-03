@@ -1,0 +1,7 @@
+{
+  "name": "My Portfolio",
+  "description": "A high-end, industrial-themed personal portfolio for a Flutter developer, featuring a machined steel topography aesthetic with integrated Gemini AI for project insights.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
