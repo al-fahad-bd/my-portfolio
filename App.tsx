@@ -298,6 +298,47 @@ const SocialLink: React.FC<{ platform: string; handle: string; url: string; inde
   );
 };
 
+const QuickLinkBar: React.FC<{ links: any[] }> = ({ links }) => {
+  return (
+    <div className="debossed-panel p-5 flex flex-col justify-center relative overflow-hidden group h-full">
+      <div className="flex items-center justify-between mb-3">
+        <span className="font-mono text-[8px] text-black/40 uppercase tracking-widest">RAPID_UPLINK</span>
+        <div className="flex gap-1">
+          <div className="w-1 h-1 bg-blue-600 rounded-full animate-pulse"></div>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-4 gap-2">
+        {links.map((link) => (
+          <a
+            key={link.platform}
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative group/btn h-10 md:h-12 bg-gradient-to-br from-[#e0e2e5] to-[#c7cace] rounded-md border border-white/60 shadow-[4px_4px_10px_rgba(0,0,0,0.1),-2px_-2px_5px_rgba(255,255,255,0.8)] flex items-center justify-center transition-all duration-300 active:scale-95 active:shadow-inner hover:-translate-y-1"
+            title={link.platform}
+          >
+            {/* Screw heads */}
+            <div className="absolute top-1 left-1 w-0.5 h-0.5 bg-black/20 rounded-full opacity-40"></div>
+            <div className="absolute top-1 right-1 w-0.5 h-0.5 bg-black/20 rounded-full opacity-40"></div>
+            <div className="absolute bottom-1 left-1 w-0.5 h-0.5 bg-black/20 rounded-full opacity-40"></div>
+            <div className="absolute bottom-1 right-1 w-0.5 h-0.5 bg-black/20 rounded-full opacity-40"></div>
+
+            <div className="w-4 h-4 md:w-5 md:h-5 text-slate-700 group-hover/btn:text-blue-600 transition-colors duration-300">
+              {link.icon}
+            </div>
+          </a>
+        ))}
+      </div>
+
+      {/* Decorative Lines */}
+      <div className="absolute bottom-0 left-0 w-full h-0.5 bg-black/5">
+        <div className="h-full bg-blue-600/30 w-1/3 transform translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
+      </div>
+    </div>
+  );
+};
+
 const App: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [selectedAchievement, setSelectedAchievement] = useState<Achievement | null>(null);
@@ -350,17 +391,25 @@ const App: React.FC = () => {
   };
 
   const icons = {
-    github: <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6086 8.199-11.386 0-6.627-5.373-12-12-12z" /></svg>,
-    linkedin: <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>,
-    twitter: <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>,
-    email: <svg viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099l3.83-3.104 5.612 8.118h-18.73l5.464-8.113zm9.201-1.259l4.623-3.746v9.458l-4.623-5.712z" /></svg>
+    github: <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.24 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6086 8.199-11.386 0-6.627-5.373-12-12-12z" /></svg>,
+    linkedin: <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>,
+    twitter: <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>,
+    stackoverflow: <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.986 21.865v-6.404h2.134V24H1.844v-8.539h2.13v6.404h15.012zM6.111 19.731H16.85v-2.137H6.111v2.137zm.259-4.852l10.48 2.189.451-2.07-10.478-2.187-.453 2.068zm1.359-5.056l9.705 4.53.903-1.95-9.706-4.53-.902 1.95zm2.714-4.785l8.217 6.855 1.359-1.62-8.216-6.853-1.36 1.618zM15.73 2.073l-1.77 1.144 5.922 9.13 1.77-1.144-5.922-9.13z" /></svg>,
+    medium: <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z" /></svg>,
+    devto: <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6v5.27h.57c.72 0 1.14-.24 1.25-.72l.47-3.48c.03-.27 0-.52-.16-.68.17 0 .5-.05.71-.16v-.01zm4.4 2.1c0-.46.15-.84.44-1.12.29-.28.7-.42 1.22-.42.53 0 .94.14 1.23.42.29.28.43.66.43 1.12v1.94c0 .46-.14.83-.43 1.11-.29.28-.7.42-1.23.42-.52 0-.93-.14-1.22-.42-.29-.28-.44-.65-.44-1.11v-1.94zM12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.62 17.56h-2.18v-5.27h-1.66v5.27h-2.14v-5.27h-2.1v5.27H7.36v-6.9h2.51c.96 0 1.62.27 1.99.82l-.01.01c.4-.55 1.05-.83 1.95-.83h3.81v6.9z" /></svg>,
+    leetcode: <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.843 5.843 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.156a6.3 6.3 0 0 0-1.301.082 6.75 6.75 0 0 0-1.408.351zM24.805 3.423a1.374 1.374 0 0 0-1.94-.208l-3.501 2.831c-.593.48-.696 1.349-.216 1.943a1.383 1.383 0 0 0 1.94.208l3.501-2.831c.593-.479.696-1.349.216-1.943z" /></svg>,
+    dribbble: <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.57-2.003 4.19-5.02 4.392-6.87zm-6.115 7.808c-.153-.9-.74-4.24-2.19-8.03-3.09 1.09-6.37 1.21-6.688 1.21-.064 0-.115 0-.17-.004-.047.003-.1.006-.15.006-.3 0-.58-.01-.86-.03-2.34.8-4.46 2.05-6.19 3.69l.1.13c.12.16 3.64 4.54 9.17 4.28 2.76-.13 5.35-1.25 7.08-1.25zm-14.19-2.06c.92-2.11 3.59-6.14 8.76-7.85-1.55-2.88-3.14-5.31-3.66-6.11-4.22 1.69-7.25 5.79-7.46 10.63 1.15-.99 2.08-1.99 2.36-3.33zm11.23-7.86c.48.74 2.21 3.44 3.59 6.58 2.62-1.2 3.8-3.99 3.93-4.34-1.89-2.67-4.9-4.52-8.32-4.78.33 1.14.61 1.88.8 2.54z" /></svg>
   };
 
   const socialLinks = [
-    { platform: 'GitHub', handle: '@abdullah-al-fahad', url: 'https://github.com', index: 1, icon: icons.github },
-    { platform: 'LinkedIn', handle: 'Abdullah Al Fahad', url: 'https://linkedin.com', index: 2, icon: icons.linkedin },
-    { platform: 'Twitter', handle: '@fahad_flutter', url: 'https://twitter.com', index: 3, icon: icons.twitter },
-    { platform: 'Email', handle: 'fahad.dev@protocol.net', url: 'mailto:fahad.dev@protocol.net', index: 4, icon: icons.email }
+    { platform: 'GitHub', handle: '@abdullah-al-fahad', url: 'https://github.com/al-fahad-bd', index: 1, icon: icons.github },
+    { platform: 'StackOverflow', handle: 'User: 12345', url: 'https://stackoverflow.com/users/', index: 2, icon: icons.stackoverflow },
+    { platform: 'LinkedIn', handle: 'Abdullah Al Fahad', url: 'https://linkedin.com/in/abdullah-al-fahad-bd', index: 3, icon: icons.linkedin },
+    { platform: 'Medium', handle: '@fahad_dev', url: 'https://medium.com', index: 4, icon: icons.medium },
+    { platform: 'Dev.to', handle: 'fahad-dev', url: 'https://dev.to', index: 5, icon: icons.devto },
+    { platform: 'LeetCode', handle: 'fahad_code', url: 'https://leetcode.com', index: 6, icon: icons.leetcode },
+    { platform: 'Dribbble', handle: 'fahad_design', url: 'https://dribbble.com', index: 7, icon: icons.dribbble },
+    { platform: 'Twitter', handle: '@fahad_flutter', url: 'https://twitter.com', index: 8, icon: icons.twitter },
   ];
 
   const projectTrack = [...PROJECTS, ...PROJECTS];
@@ -440,6 +489,7 @@ const App: React.FC = () => {
               <span className="font-mono text-[8px] text-black/40 uppercase block mb-1">CORE_STACK</span>
               <h3 className="text-lg md:text-xl font-black font-mono text-slate-800">Flutter / Dart / Firebase / Supabase</h3>
             </div>
+            <QuickLinkBar links={socialLinks} />
           </div>
         </section>
 
@@ -551,18 +601,7 @@ const App: React.FC = () => {
           </div>
         </section>
 
-        {/* CONNECT INTERFACE SECTION */}
-        <section id="connect" className="mt-24 md:mt-40">
-          <div className="mb-12">
-            <h2 className="text-xs font-mono font-black text-blue-600 uppercase tracking-[0.4em] mb-4">EXTERNAL_NODES</h2>
-            <h3 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tighter italic">CONNECT_INTERFACE</h3>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {socialLinks.map((link, i) => (
-              <SocialLink key={link.platform} {...link} />
-            ))}
-          </div>
-        </section>
+
 
         {/* REDESIGNED DIRECT COMMAND SECTION - MACHINED STEEL TOPOGRAPHY STYLE */}
         <section id="command" className="mt-24 md:mt-40 relative group interactive cursor-none">
