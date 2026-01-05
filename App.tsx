@@ -402,14 +402,14 @@ const App: React.FC = () => {
   };
 
   const socialLinks = [
-    { platform: 'GitHub', handle: '@abdullah-al-fahad', url: 'https://github.com/al-fahad-bd', index: 1, icon: icons.github },
-    { platform: 'StackOverflow', handle: 'User: 12345', url: 'https://stackoverflow.com/users/17717985/abdullah-al-fahad', index: 2, icon: icons.stackoverflow },
-    { platform: 'LinkedIn', handle: 'Abdullah Al Fahad', url: 'https://linkedin.com/in/abdullah-al-fahad-bd', index: 3, icon: icons.linkedin },
-    { platform: 'Medium', handle: '@fahad_dev', url: 'https://medium.com', index: 4, icon: icons.medium },
-    { platform: 'Dev.to', handle: 'fahad-dev', url: 'https://dev.to/fahad-bd', index: 5, icon: icons.devto },
-    { platform: 'LeetCode', handle: 'fahad_code', url: 'https://leetcode.com/u/Fahad-BD/', index: 6, icon: icons.leetcode },
+    { platform: 'GitHub', handle: '@al-fahad-bd', url: 'https://github.com/al-fahad-bd', index: 1, icon: icons.github },
+    { platform: 'StackOverflow', handle: 'abdullah-al-fahad', url: 'https://stackoverflow.com/users/17717985/abdullah-al-fahad', index: 2, icon: icons.stackoverflow },
+    { platform: 'LinkedIn', handle: 'abdullah-al-fahad-bd', url: 'https://linkedin.com/in/abdullah-al-fahad-bd', index: 3, icon: icons.linkedin },
+    { platform: 'Medium', handle: '@fahad.bd', url: 'https://medium.com/@fahad.bd', index: 4, icon: icons.medium },
+    { platform: 'Dev.to', handle: 'fahad-bd', url: 'https://dev.to/fahad-bd', index: 5, icon: icons.devto },
+    { platform: 'LeetCode', handle: 'Fahad-BD', url: 'https://leetcode.com/u/Fahad-BD/', index: 6, icon: icons.leetcode },
     { platform: 'Kaggle', handle: 'abdullahalfahad25', url: 'https://www.kaggle.com/abdullahalfahad25', index: 7, icon: icons.kaggle },
-    { platform: 'Twitter', handle: '@fahad_flutter', url: 'https://x.com/al_fahad_bd', index: 8, icon: icons.twitter },
+    { platform: 'Twitter', handle: '@al_fahad_bd', url: 'https://x.com/al_fahad_bd', index: 8, icon: icons.twitter },
   ];
 
   const projectTrack = [...PROJECTS, ...PROJECTS];
