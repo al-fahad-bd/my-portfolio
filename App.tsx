@@ -346,10 +346,11 @@ const App: React.FC = () => {
   const [devTime, setDevTime] = useState('');
   const [visitorLoc, setVisitorLoc] = useState('DETECTING_LOC...');
   const [isAvailable, setIsAvailable] = useState(false);
+  const [isStatusLoading, setIsStatusLoading] = useState(true);
 
   useEffect(() => {
     // Update Time (GMT+6 - Asia/Dhaka)
-    const timer = setInterval(() => {
+    const updateTimeAndStatus = () => {
       const now = new Date();
       const options: Intl.DateTimeFormatOptions = {
         timeZone: 'Asia/Dhaka',
@@ -364,7 +365,11 @@ const App: React.FC = () => {
       // Availability check (Example: 9 AM to 10 PM GMT+6)
       const dhakaHour = parseInt(now.toLocaleTimeString('en-GB', { timeZone: 'Asia/Dhaka', hour: '2-digit' }));
       setIsAvailable(dhakaHour >= 9 && dhakaHour < 22);
-    }, 1000);
+      setIsStatusLoading(false);
+    };
+
+    updateTimeAndStatus(); // Run immediately
+    const timer = setInterval(updateTimeAndStatus, 1000);
 
     // Detect Visitor Location
     if (navigator.geolocation) {
@@ -439,7 +444,12 @@ const App: React.FC = () => {
           </div>
           <div className="font-mono text-[9px] text-black/40 tracking-[0.4em] uppercase text-left md:text-right w-full md:w-auto flex flex-col items-start md:items-end">
             <span>REF: 2021-2024_DEV_CYCLE</span>
-            <span className="text-[7px] mt-1 opacity-60">STATUS: {isAvailable ? 'ACTIVE_AND_AVAILABLE' : 'IDLE_OFFLINE_MODE'}</span>
+            <div className={`mt-2 flex items-center gap-2 px-3 py-1.5 border rounded-sm ${isStatusLoading ? 'bg-slate-500/5 border-slate-500/20 text-slate-700' : isAvailable ? 'bg-green-500/5 border-green-500/20 text-green-700' : 'bg-orange-500/5 border-orange-500/20 text-orange-700'}`}>
+              <div className={`w-1.5 h-1.5 rounded-full ${isStatusLoading ? 'bg-slate-400' : isAvailable ? 'bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)]' : 'bg-orange-500'} ${isStatusLoading || isAvailable ? 'animate-pulse' : ''}`}></div>
+              <span className="text-[9px] font-bold tracking-widest">
+                {isStatusLoading ? 'INITIALIZING_PROTOCOLS...' : isAvailable ? 'SYSTEM_ONLINE_&_ACTIVE' : 'SYSTEM_IDLE_OFFLINE'}
+              </span>
+            </div>
           </div>
         </header>
 
