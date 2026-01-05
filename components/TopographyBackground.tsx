@@ -70,7 +70,7 @@ const TopographyBackground: React.FC = () => {
               r={l.r}
               fill="none"
               stroke="black"
-              strokeWidth="0.4"
+              strokeWidth="0.20"
               strokeOpacity={l.opacity}
             />
           ))}
@@ -89,7 +89,7 @@ const TopographyBackground: React.FC = () => {
               r={l.r * 1.2}
               fill="none"
               stroke="black"
-              strokeWidth="0.3"
+              strokeWidth="0.15"
               strokeOpacity={l.opacity * 0.5}
             />
           ))}
