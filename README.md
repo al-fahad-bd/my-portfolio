@@ -54,8 +54,8 @@ npm run build
 
 ## 🌐 Live Demo
 
-🔗 **Website:** https://your-portfolio-link  
-🔗 **Repository:** https://github.com/your-username/portfolio  
+🔗 **Website:** https://abdullahalfahad.vercel.app/ 
+🔗 **Repository:** https://github.com/al-fahad-bd/my-portfolio  
 
 ---
 
@@ -75,10 +75,10 @@ Feel free to open an issue or submit a pull request.
 
 ## 📩 Contact
 
-- 📧 **Email:** your-email  
-- 🌐 **Portfolio:** your-site  
-- 💼 **LinkedIn:** your-link  
-- 🐦 **Twitter:** your-twitter (optional)
+- 📧 **Email:** fahad.bauet@gmail.com  
+- 🌐 **Portfolio:** [your-site](https://abdullahalfahad.vercel.app/)  
+- 💼 **LinkedIn:** [your-link](https://abdullahalfahad.vercel.app/)  
+- 🐦 **Twitter:** [your-twitter](https://x.com/al_fahad_bd)
 
 ---
 
