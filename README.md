@@ -25,69 +25,62 @@ A modern, responsive, and clean platform to showcase my **projects, skills, and 
 - **Hosting:** Vercel  
 - **Version Control:** Git & GitHub
 
-> If your portfolio is built with Flutter Web, tell me — I’ll rewrite this section.
-
 ---
 
 ## 📦 Installation & Setup
 
-Clone the repository:
-
 ```bash
 git clone https://github.com/your-username/portfolio.git
+cd portfolio
+npm install
+npm run dev
+npm run build
 ```
 
-#📦 Installation & Setup
+---
 
-Clone the repository:
+## 📁 Project Structure
 
-git clone https://github.com/your-username/your-portfolio.git
-
-
-Navigate to the project:
-
-cd your-portfolio
-
-
-Install dependencies:
-
-npm install
-
-
-Start development server:
-
-npm run dev
-
-
-Build for production:
-
-npm run build
-
-📁 Project Structure
+```
 📦 portfolio
  ┣ 📂public
  ┣ 📂src
  ┣ 📜package.json
  ┣ 📜README.md
+ ┣ 📜next.config.js
+```
 
-🌐 Live Demo
+---
 
-🔗 Live Website: Add your deployed Vercel link here
-🔗 GitHub Repo: Add your repo link here
+## 🌐 Live Demo
 
-👤 About Me
+🔗 **Website:** https://your-portfolio-link  
+🔗 **Repository:** https://github.com/your-username/portfolio  
 
-Hi, I’m Abdullah Al Fahad — a Flutter Developer passionate about building beautiful, high-performance mobile and web applications.
-I enjoy creating smooth UI, meaningful animations, and scalable app architecture using modern frameworks and clean coding practices.
+---
 
-🤝 Contributing
+## 👤 About Me
 
-This is a personal project, but suggestions, issues, and improvements are welcome!
-Feel free to open a pull request.
+I’m **Abdullah Al Fahad**, a passionate **Flutter Developer** who loves building clean, modern, and high-performance applications.  
+I focus on writing clean code, creating smooth animations, and crafting meaningful user experiences.
 
-📩 Contact
+---
 
-📧 Email: your-email
-🌐 Portfolio: your-portfolio-link
-💼 LinkedIn: your-linkedin
-🐦 Twitter: your-twitter (optional)
+## 🤝 Contributing
+
+This is a personal portfolio project, but suggestions and improvements are always welcome.  
+Feel free to open an issue or submit a pull request.
+
+---
+
+## 📩 Contact
+
+- 📧 **Email:** your-email  
+- 🌐 **Portfolio:** your-site  
+- 💼 **LinkedIn:** your-link  
+- 🐦 **Twitter:** your-twitter (optional)
+
+---
+
+### ⭐ If you found this project helpful or inspiring, please give it a star on GitHub!
+
