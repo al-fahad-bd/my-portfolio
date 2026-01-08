@@ -30,7 +30,7 @@ A modern, responsive, and clean platform to showcase my **projects, skills, and 
 ## 📦 Installation & Setup
 
 ```bash
-git clone https://github.com/your-username/portfolio.git
+git clone https://github.com/al-fahad-bd/my-portfolio.git
 cd portfolio
 npm install
 npm run dev
