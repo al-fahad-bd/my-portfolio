@@ -76,9 +76,9 @@ Feel free to open an issue or submit a pull request.
 ## 📩 Contact
 
 - 📧 **Email:** fahad.bauet@gmail.com  
-- 🌐 **Portfolio:** [your-site](https://abdullahalfahad.vercel.app/)  
-- 💼 **LinkedIn:** [your-link](https://abdullahalfahad.vercel.app/)  
-- 🐦 **Twitter:** [your-twitter](https://x.com/al_fahad_bd)
+- 🌐 **Portfolio:** [abdullahalfahad.vercel.app](https://abdullahalfahad.vercel.app/)  
+- 💼 **LinkedIn:** [linkedin.com/in/al-fahad-bd](https://www.linkedin.com/in/al-fahad-bd/)  
+- 🐦 **Twitter:** [x.com/al_fahad_bd](https://x.com/al_fahad_bd)
 
 ---
 
