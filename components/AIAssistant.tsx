@@ -4,7 +4,7 @@ import { chatWithDeveloperAI } from '../services/geminiService';
 
 const AIAssistant: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<{role: 'user' | 'bot', content: string}[]>([
+  const [messages, setMessages] = useState<{ role: 'user' | 'bot', content: string }[]>([
     { role: 'bot', content: 'TERMINAL ONLINE. I am the virtual engineering overseer. Query Abdullah\'s technical repository here.' }
   ]);
   const [input, setInput] = useState('');
@@ -46,17 +46,17 @@ const AIAssistant: React.FC = () => {
               <div className="w-2 h-2 bg-blue-500 animate-pulse"></div>
               <span className="text-[10px] font-mono text-white tracking-[0.2em] font-bold">FAHAD_BOT_v1.0.4</span>
             </div>
-            <button 
+            <button
               onClick={(e) => {
                 e.stopPropagation();
                 setIsOpen(false);
-              }} 
+              }}
               className="text-white hover:text-red-500 font-mono text-[10px] interactive border border-white/20 px-2 py-0.5 hover:border-red-500 transition-colors"
             >
               [ TERMINATE_X ]
             </button>
           </div>
-          
+
           {/* Messages Area */}
           <div className="flex-1 overflow-y-auto p-4 space-y-4 font-mono text-[10px] bg-[#d1d5db]/50 backdrop-blur-sm">
             {messages.map((m, i) => (
@@ -80,40 +80,40 @@ const AIAssistant: React.FC = () => {
 
           {/* Input Area */}
           <div className="p-3 border-t border-black flex space-x-2 bg-white/80 shrink-0">
-            <input 
-              type="text" 
+            <input
+              type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleSend()}
               placeholder="ENTER_CMD_OR_QUERY_"
               className="flex-1 bg-slate-100 border border-black/10 rounded-none px-3 py-2 text-[10px] font-mono focus:outline-none focus:border-blue-600 transition-colors"
             />
-            <button 
-              onClick={handleSend} 
+            <button
+              onClick={handleSend}
               className="bg-black text-white px-4 py-2 hover:bg-blue-700 transition-colors interactive flex items-center justify-center shrink-0"
               disabled={isTyping}
             >
               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path d="M5 12h14M12 5l7 7-7 7" strokeWidth="3" strokeLinecap="square"/>
+                <path d="M5 12h14M12 5l7 7-7 7" strokeWidth="3" strokeLinecap="square" />
               </svg>
             </button>
           </div>
         </div>
       ) : (
-        <button 
+        <button
           onClick={() => setIsOpen(true)}
           className="group interactive relative w-16 h-16 md:w-20 md:h-20 transition-all duration-300 transform hover:scale-105"
         >
           {/* Main Octagonal Steel Plate */}
-          <div 
+          <div
             className="absolute inset-0 bg-[#b8bcC2] border border-black/40 shadow-[4px_4px_10px_rgba(0,0,0,0.2),-2px_-2px_5px_rgba(255,255,255,0.7)] group-hover:shadow-[0_0_20px_rgba(37,99,235,0.3)] transition-all duration-500"
-            style={{ 
+            style={{
               clipPath: 'polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%)',
               background: 'linear-gradient(135deg, #e0e2e5 0%, #b8bcC2 45%, #9499a1 100%)'
             }}
           >
             {/* Inner Etched Area */}
-            <div 
+            <div
               className="absolute inset-[3px] bg-black/5 border border-black/10"
               style={{ clipPath: 'polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%)' }}
             ></div>

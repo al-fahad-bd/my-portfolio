@@ -454,12 +454,12 @@ const App: React.FC = () => {
         </header>
 
         {/* HERO SECTION */}
-        <section className="grid lg:grid-cols-[1fr_300px_450px] gap-8 md:gap-12 items-center mb-16 md:mb-24">
+        <section className="grid lg:grid-cols-[1.2fr_0.8fr_1fr] xl:grid-cols-[1.5fr_0.8fr_1fr] gap-8 md:gap-12 lg:gap-8 items-center mb-16 md:mb-24">
           <div className="relative order-1 lg:order-1">
             <div className="absolute -top-12 left-0 font-mono text-[10px] text-blue-600 font-bold opacity-60 hidden sm:block">
               // INITIALIZING_PERSONA
             </div>
-            <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-[70px] xl:text-[90px] leading-[0.9] embossed-text mb-8 md:mb-12 tracking-tighter break-words">
+            <h1 className="text-[clamp(3rem,8vw,5.625rem)] xl:text-[90px] leading-[0.9] embossed-text mb-8 md:mb-12 tracking-tighter break-words">
               ABDULLAH<br />
               <span className="text-black/30">AL FAHAD</span>
             </h1>
